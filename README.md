@@ -1,1 +1,1 @@
-- Example npm package with webview link
+- Example npm package with WebView screen
