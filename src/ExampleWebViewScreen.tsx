@@ -1,8 +1,35 @@
 import { WebView } from "react-native-webview";
-import { View } from "native-base";
-import React from "react";
+import { View, Text, HStack, Pressable } from "native-base";
+import React, { useEffect } from "react";
+import { RouteProp, NavigationProp } from "@react-navigation/native";
+interface props {
+  onPress?: () => void;
+  navigation: NavigationProp<any, any>;
+  route: RouteProp<any, any>;
+}
+export const ExampleWebViewScreen = ({ navigation }: props) => {
+  useEffect(() => {
+    navigation.setOptions({
+      headerLeft: () => (
+        <Pressable onPress={() => navigation.goBack()}>
+          <HStack>
+            <Text
+              marginLeft={1}
+              fontSize="16"
+              fontWeight={"bold"}
+              color="#90b800"
+            >
+              ←
+            </Text>
+            <Text fontWeight={"bold"} fontSize="16" color="#90b800">
+              Back
+            </Text>
+          </HStack>
+        </Pressable>
+      ),
+    });
+  }, [navigation]);
 
-export const ExampleWebViewScreen = () => {
   return (
     <View style={{ flex: 1 }}>
       <WebView
