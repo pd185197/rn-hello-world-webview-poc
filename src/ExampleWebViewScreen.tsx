@@ -13,12 +13,7 @@ export const ExampleWebViewScreen = ({ navigation }: props) => {
       headerLeft: () => (
         <Pressable onPress={() => navigation.goBack()}>
           <HStack>
-            <Text
-              marginLeft={1}
-              fontSize="16"
-              fontWeight={"bold"}
-              color="#90b800"
-            >
+            <Text marginX={1} fontSize="16" fontWeight={"bold"} color="#90b800">
               ←
             </Text>
             <Text fontWeight={"bold"} fontSize="16" color="#90b800">
