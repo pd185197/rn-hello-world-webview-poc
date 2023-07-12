@@ -32,7 +32,7 @@ export const HelloWorldScreen = ({ navigation }: props) => {
       >
         <HStack>
           <Text color="white" fontSize="20" fontWeight={"bold"} ml="0.5">
-            Native login
+            WebView Screen
           </Text>
           <Text color="white" fontSize="20" mt="0.4" ml="1" fontWeight={"bold"}>
             →
