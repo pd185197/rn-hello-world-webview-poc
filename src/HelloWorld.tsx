@@ -34,7 +34,7 @@ export const HelloWorldScreen = ({ navigation }: props) => {
           <Text color="white" fontSize="20" fontWeight={"bold"} ml="0.5">
             WebView Screen
           </Text>
-          <Text color="white" fontSize="20" mt="0.4" ml="1" fontWeight={"bold"}>
+          <Text color="white" fontSize="20" mt="0.5" ml="1" fontWeight={"bold"}>
             →
           </Text>
         </HStack>
