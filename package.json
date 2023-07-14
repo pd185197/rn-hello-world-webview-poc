@@ -1,6 +1,6 @@
 {
   "name": "rn-hello-world-webview-poc",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Example npm package with webview link",
   "main": "index.tsx",
   "scripts": {

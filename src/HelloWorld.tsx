@@ -1,13 +1,19 @@
 import React from "react";
 import { Text, Button, View, HStack } from "native-base";
-import { RouteProp, NavigationProp } from "@react-navigation/native";
+import { NativeModules } from "react-native";
+
+import { NavigationProp } from "@react-navigation/native";
 
 interface props {
-  onPress?: () => void;
   navigation: NavigationProp<any, any>;
-  route: RouteProp<any, any>;
 }
 export const HelloWorldScreen = ({ navigation }: props) => {
+  const { NativeRouterModule } = NativeModules;
+
+  const onPress = () => {
+    NativeRouterModule.dismiss();
+  };
+
   return (
     <View
       borderColor="#b30000"
@@ -19,9 +25,26 @@ export const HelloWorldScreen = ({ navigation }: props) => {
       <Text color="white" fontSize="23px" fontWeight="bold" paddingY="6">
         Hello, World!
       </Text>
-      <Text color="white" fontSize="23px" fontWeight="bold" paddingBottom="8">
+      <Text color="white" fontSize="23px" fontWeight="bold" paddingBottom="6">
         This is a RN screen.
       </Text>
+
+      <Button
+        onPress={onPress}
+        _pressed={{ bg: "#b1e004" }}
+        bg="#90b800"
+        mx="6"
+        my="6"
+      >
+        <HStack>
+          <Text color="white" fontSize="20" fontWeight={"bold"} ml="0.5">
+            Native Login
+          </Text>
+          <Text color="white" fontSize="20" mt="0.5" ml="1" fontWeight={"bold"}>
+            →
+          </Text>
+        </HStack>
+      </Button>
 
       <Button
         onPress={() => navigation.navigate("WebView Screen")}
