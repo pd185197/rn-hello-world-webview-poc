@@ -36,14 +36,9 @@ export const HelloWorldScreen = ({ navigation }: props) => {
         mx="6"
         my="6"
       >
-        <HStack>
-          <Text color="white" fontSize="20" fontWeight={"bold"} ml="0.5">
-            Native Login
-          </Text>
-          <Text color="white" fontSize="20" mt="0.5" ml="1" fontWeight={"bold"}>
-            →
-          </Text>
-        </HStack>
+        <Text color="white" fontSize="20" fontWeight={"bold"} ml="0.5">
+          Close
+        </Text>
       </Button>
 
       <Button
